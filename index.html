@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Range Print</title>
+</head>
+<body>
+    <h1>Range Print</h1>
+    <script>
+    function printRange(start, end, skip){
+        if (end==undefined){
+            for(var i=0; i<start; i++){
+                console.log(i);
+            }
+        }
+        else if(skip==undefined){
+            for(var i=start; i<end; i++){
+                console.log(i);
+            }
+        }
+        else{
+            for(var i=start; i<end; i+=skip){
+            console.log(i);
+            }
+        }
+    }
+
+    printRange(2,10,2);
+
+    printRange(4,8);
+
+    printRange(9);
+    
+    printRange(-3,9,3);
+    </script>
+</body>
+</html>
